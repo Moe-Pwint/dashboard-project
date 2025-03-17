@@ -1,14 +1,323 @@
+@font-face {
+    font-family:'Inter-light';
+    src: url('fonts/Inter 18pt Light.woff2') format('woff2'),
+		url('fonts/Inter 18pt Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-EE07;
+}
+@font-face {
+    font-family:'Inter-medium';
+    src: url('fonts/Inter 18pt Medium.woff2') format('woff2'),
+		url('fonts/Inter 18pt Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-EE07;
+}
+@font-face {
+    font-family:'Inter';
+    src: url('fonts/Inter 18pt Regular.woff2') format('woff2'),
+		url('fonts/Inter 18pt Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-EE07;
+}
+@font-face {
+    font-family:'Inter-semiBold';
+    src: url('fonts/Inter 18pt SemiBold.woff2') format('woff2'),
+		url('fonts/Inter 18pt SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-EE07;
+}
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('fonts/Coolvetica-Regular.woff2') format('woff2'),
+        url('fonts/Coolvetica-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 * {
     margin:0;
     padding:0;
 }
-
-.container {
-    display:grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 200px 1fr;
+li {
+    list-style-type: none;
 }
 
+
+
+.container {
+    font-family:'Inter';
+    display:grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 200px 1fr;
+    padding:0 100px;
+}
+.flex {
+    display:flex;
+}
+
+
+
+
+
+
+/* -------------------------------Dashboard section----------------------- */
 .sidebar {
     grid-row:1/-1;
+    background-color: rgb(65, 157, 255);
+    color:white;
+    font-family: 'Inter-semibold';
+    font-size: 20px;;
+}
+
+.sidebar svg {
+    fill:white;
+    padding-left:20px;
+    padding-right:20px;
+    width:1.4em;  
+}
+
+.top-section {
+    padding-bottom:30px;
+}.flex {
+    padding-bottom:15px;
+}
+
+.logo {
+    font-size: 1.7rem;
+    padding-top:20px;
+    padding-bottom: 30px;
+}
+
+#logo-img {
+    padding-left:15px;
+    padding-right:14px;
+}
+
+
+
+
+
+
+/* --------------------------------Header section ---------------------*/
+.header-container {
+    display:grid;
+    grid-template-rows: 0.6fr 1fr;
+    padding:10px 50px 10px 50px;
+    row-gap: 10px;
+    box-shadow: 0px 5px 7px rgb(225, 225, 225);
+}
+
+.top-header,.bottom-header {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.top-header {
+    align-self:end;
+    column-gap:15px;
+}
+
+.search {
+    display:flex;
+    align-items: center;
+    font-size:inherit;
+}
+svg#magnifier {
+    width:1.5em;
+    margin-right: 10px;
+}
+
+#search-bar {
+    grid-column: 1/3;
+    border-radius: 3em;
+    height:2.5em;
+    width:max(7ch,40vw);
+    border: none;
+    appearance: none;
+    padding:15px;
+    background-color: #e5e8ef;
+}
+#search-bar:focus {
+    appearance: none;
+    outline: none;
+    border: 1.8px solid  rgb(65, 157, 255);
+    background-color:rgb(225, 228, 232);
+    box-shadow:inset 0 3px 3px #c2c2c5;
+}
+
+#search-bar:hover {
+    background-color:rgb(225, 228, 232);
+    box-shadow:inset 0 3px 3px #c2c2c5;
+}
+
+.user-profile {
+    justify-self:end;
+    grid-column: 3;
+    display:flex;
+    gap:25px;
+    align-items: center;
+}
+
+.user-profile p {
+    font-family: 'Coolvetica';
+    font-size: 20px;
+    color:rgb(65, 157, 255);
+    width:max-content;
+}
+
+.small-profile {
+    width:50px;
+    height:50px;
+}
+
+svg#bell {
+    fill:rgb(65, 157, 255);
+    width:1.5em;
+}
+
+
+.bottom-header {
+    align-items: center;
+    color:rgb(228, 160, 23);
+}
+.user-display {
+    display: grid;
+    grid-template:80px/80px 1fr;
+    align-items: center;
+    column-gap: 20px;
+}
+
+#profile-pic {
+    grid-row:1/-1;
+    width:80px;
+}
+
+#username {
+    font-size: 35px;
+    font-family:'Coolvetica';
+    color:rgb(228, 160, 23);
+    width:max-content;
+}
+
+.head-buttons {
+    grid-column: 2/4;
+    justify-self: end;
+} ul{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    justify-content: space-between;
+    gap:15px;
+}button {
+    background-color: rgb(65, 157, 255);
+    font:inherit;
+    color:white;
+    border: none;
+    min-width:100px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 30px;
+    font-family: 'Inter-semibold';
+}
+
+
+
+
+
+
+/* -------------------------Main section------------------------------ */
+.main-container {
+
+    display:grid;
+    grid-template: 50px 1fr 50px 1fr/2.5fr 1fr;
+    gap:10px;
+    background-color: rgb(233, 246, 255);
+    z-index: -1;
+}   
+
+#projects-header,#announcements-header,#trending-header {
+    color: rgb(228, 160, 23);
+    margin-top:30px;
+    font-size: 23px;
+}
+
+#projects-header {
+    margin-left:25px;
+}
+
+.projects {
+    margin:25px;
+    grid-row:2/-1;
+    display:grid;
+    gap:25px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-rows: repeat(auto-fill,minmax(300px,1fr));
+}
+
+.project-cards {
+    position:relative;
+    background-color:rgb(255, 255, 255);
+    box-shadow: 2px 2px 6px 2px rgb(206, 215, 220);
+    border-radius:10px;
+    padding:40px 10px 10px 30px;
+}
+
+.project-cards h3 {
+    margin-bottom:10px;
+}
+
+.project-cards ul {
+    margin-top: 10px;
+    display:flex;
+    position:absolute;
+    bottom:10px;
+    right:30px;
+    gap:25px;
+}
+
+.project-cards svg {
+    fill:rgb(65, 157, 255);
+    width:1.6em;
+}
+
+/* .project-cards svg:hover {
+    cursor: pointer;
+} */
+
+.announcements {
+    /* display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); */
+    margin: 25px 30px 0px 0px;
+    background-color: aqua;
+    padding:30px;
+    width: min(300px,1fr);
+    background-color:rgb(255, 255, 255);
+    box-shadow: 2px 2px 6px 2px rgb(206, 215, 220);
+    border-radius:10px;
+}
+
+.announcements div.articles {
+    padding:15px 15px 20px 15px;
+    border-bottom:1px solid grey;
+}
+
+.announcements p {
+    font-size: 0.9em;
+    padding-top:5px;
+}
+
+.announcements div.articles:last-child {
+    border:none;
+    padding-bottom: 15px;
 }
