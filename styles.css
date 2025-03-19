@@ -294,16 +294,10 @@ button:active {
 
 /* -------------------------Main section------------------------------ */
 .main-container {
-
     display:grid;
-<<<<<<< HEAD
-    grid-template: 50px 1fr 50px 1fr/1fr 350px;
-=======
     grid-template-columns:2.5fr 350px;
->>>>>>> version-2
     gap:10px;
     background-color: rgb(233, 246, 255);
-    /* z-index: -1; */
 }   
 
 #projects-header,#announcements-header,#trending-header {
